@@ -1,0 +1,76 @@
+html, body, #map_canvas {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  background-color: rgba(0,0,0,0.3);
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  line-height: 37px;
+}
+
+.header .container-fluid {
+  position: relative;
+}
+
+.header h1 {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1.2px;    
+  margin: 0;
+  padding: 10px 0 10px 55px;
+  text-transform: uppercase;
+}
+
+.header a {
+  padding-right: 20px;
+  color: #fff;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#map_canvas {
+  position: relative;
+}
+
+.angular-leaflet-map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.btn {
+  margin: 6px;
+  font-size: 16px;
+}
+
+.about {
+  text-align: center; 
+  position: relative; 
+  top: 100px; 
+  } 
+.about h1 {
+  font-size: 48px; 
+  font-weight: 300; 
+  margin: 42px 0; 
+} 
+.about h2 {
+  font-size: 26px; 
+  margin: 42px 0; 
+} 
+.about .btn {
+  font-weight: 600; 
+  border-radius: 0; 
+  padding: 16px 26px; 
+  font-size: 16px; 
+}

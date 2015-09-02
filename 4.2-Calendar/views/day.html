@@ -1,0 +1,12 @@
+<!-- Format a date so it displays in the format "Friday 1/16" -->
+<h2 class="date">{{day.date | date:'EEEE M/dd'}}</h2>
+
+<!--
+TODO: Loop through events and display each one with this HTML-->
+
+<div class="event" ng-repeat="event in day.events">
+  <a href="#/{{$index}}">
+    <h3 class="name">{{event.name}}</h3>
+    <p><span class="from">{{event.from | date:'shortTime'}}</span> - <span class="to">{{event.to | date:'shortTime'}}</span></p>
+  </a>
+</div>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700italic|Oswald' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  </head>
+  <body ng-app="PizzaPlanetApp">
+    <div class="header">
+      <h1><span>Pizza</span><span>Planet</span></h1>
+    </div>
+
+    <div class="main" ng-controller="MainController">
+      <div class="container">
+        <h1>Specials for {{ today | date }}</h1>
+        
+        <h2>Appetizers</h2>
+        <div class="appetizers row" ng-repeat="menu in appetizers">
+          <div class="item col-md-9">
+            <h3 class="name">{{menu.name}}</h3>
+            <p class="description">{{menu.description}}</p>
+          </div>
+          <div class="price col-md-3">
+            <p class="price">{{ menu.price | currency}}</p>
+          </div>
+        </div><!--end appetisers-->
+        <h2>Mains</h2>
+        <div class="mains row" ng-repeat="menu in mains">
+          <div class="item col-md-9">
+            <h3 class="name">{{menu.name}}</h3>
+            <p class="description">{{menu.description}}</p>
+          </div>
+          <div class="price col-md-3">
+            <p class="price">{{ menu.price | currency}}</p>
+          </div>
+        </div><!--end mains-->
+        <h2>Extras</h2>
+        <div class="extras row" ng-repeat="menu in extras">
+          <div class="item col-md-9">
+            <h3 class="name">{{menu.name}}</h3>
+            <p class="description">{{menu.description}}</p>
+          </div>
+          <div class="price col-md-3">
+            <p class="price">{{ menu.price | currency}}</p>
+          </div><!--end extras-->
+        </div><!--end appetisers-->
+      </div><!--end container-->
+    </div>
+
+    <div class="footer">
+    </div>
+    
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+  </body>
+</html>
